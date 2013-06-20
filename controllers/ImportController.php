@@ -39,7 +39,6 @@ class BostonJsonImport_ImportController extends Omeka_Controller_AbstractActionC
         $table = $this->_helper->db->getTable('Item');
         $lastImportFilePath = PLUGIN_DIR . "/BostonJsonImport/files/last_import.txt";
         $itemIds = unserialize(file_get_contents($lastImportFilePath));
-        print_r($itemIds);
         
         foreach($itemIds as $id) {
             
